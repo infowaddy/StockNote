@@ -1,0 +1,41 @@
+version: '3.7'
+
+name: StockNote-Docker-Compose
+
+services:
+  stocknote.webapi:
+    image: ${DOCKER_REGISTRY-}stocknotewebapi
+    container_name: StockNote-API
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+    - "5080:80"
+    - "5443:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+    build:
+      context: .
+      dockerfile: ../StockNote.WebAPI/Dockerfile
+    depends_on:
+      - stocknote.db
+    
+
+  stocknote.db:
+    container_name: StockNote-SQLServer
+    image: mcr.microsoft.com/mssql/server:2022-latest 
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=N0Password!
+    ports:
+      - "1433:1433"
+
+  stocknote.api.test.db:
+    container_name: StockNote-Test-SQLServer
+    image: mcr.microsoft.com/mssql/server:2022-latest 
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=N0Password!
+    ports:
+      - "5555:1433"
+ 
+

@@ -1,0 +1,3 @@
+To run WebAPI for development, Run docker-compose and debug from WebAPI on browser.
+To run WebAPI Test for controller integration test, Run docker-compose-test and debug-test WebAPI.Test project.
+To run BusinessLayer Test for manager integration test, Run docker-compose-test and debug-test BusinessLayer.Test project.

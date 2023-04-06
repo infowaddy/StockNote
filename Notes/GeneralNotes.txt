@@ -1,0 +1,26 @@
+Learning idea
+- How to deploy .NET API to AZURE APP (Cloud Native App)
+- How to deploy .NET API to AZURE APP via AZURE DevOp or GitHub
+- How to deploy .NET API with SQL Database to AZURE APP
+- How to deploy .NET API with SQL Database to AZURE APP via AZURE DevOp or GitHub
+
+https://docs.duendesoftware.com/identityserver/v6/overview/big_picture/
+https://www.youtube.com/watch?v=MOA8Kmfv6Ps
+https://auth0.com/blog/aspnet-web-api-authorization/
+
+EF7 New Feature
+https://learn.microsoft.com/en-us/ef/core/
+https://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx
+Ref: https://www.c-sharpcorner.com/article/new-features-of-entity-framework-7/
+- Automatic Migration
+- Database first : no more EDMX file. Beautiful 
+	https://www.youtube.com/watch?v=TE1Hpi1SSaE
+- Open source at GitHub
+	https://github.com/dotnet/efcore
+- Unique Constraint : Aditional Unique Key (Primary Key)
+	E.g. ProductID and Barcode, EmployeeID and EmployeeNumber
+- Shadow Properties: https://www.entityframeworktutorial.net/efcore/shadow-property.aspx
+
+
+router - CISCO 500 to 1000
+VMARE - License

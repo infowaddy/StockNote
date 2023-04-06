@@ -1,0 +1,19 @@
+How to create EF Core code first migration
+==================================================
+[Required packages]
+- Microsoft.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.Tools
+- Microsoft.EntityFrameworkCore.SqlServer
+
+[Create Migration for EF7]
+- delete existing Migration Folder
+- Run below codes inside Package Manager Console
+  add-migration initStockNote -project StockNote.DataAccess -context StockNoteDbContext -output Migrations\StockNoteDbContext -startupproject StockNote.WebAPI
+
+Note- For Future (after live) we shall not delete the migration folder.
+[Create Migration for EF7 - After Go Live]
+- Run below codes with different version inside Package Manager Console
+  add-migration {Version} -project StockNote.DataAccess -context StockNoteDbContext -output Migrations\StockNoteDbContext -startupproject StockNote.WebAPI
+
+- To update migration
+	Update-Database

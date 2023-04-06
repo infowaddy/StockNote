@@ -1,0 +1,22 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "stocknote.db": "StartWithoutDebugging",
+        "stocknote.webapi": "StartDebugging",
+        "stocknote.api.test.db": "StartWithoutDebugging"
+      }
+    },
+    "Docker-Compose-APITest": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "stocknote.api.test.db": "StartWithoutDebugging",
+        "stocknote.db": "DoNotStart",
+        "stocknote.webapi": "DoNotStart"
+      }
+    }
+  }
+}
